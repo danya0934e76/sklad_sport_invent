@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sklad_sport_invent.API", "sklad_sport_invent.API\sklad_sport_invent.API.csproj", "{D41B4C67-D26F-4A06-8594-13604D5AFDAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sklad_sport_invent.Context", "sklad_sport_invent.Context\sklad_sport_invent.Context.csproj", "{FBF58EB4-1FA8-4AEC-8C2D-43DDAE7E3FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sklad_sport_invent.Context.Contacts", "sklad_sport_invent.Context.Contacts\sklad_sport_invent.Context.Contacts.csproj", "{B780A1A6-60BF-43AD-8D41-34DE0D98C60F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D41B4C67-D26F-4A06-8594-13604D5AFDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D41B4C67-D26F-4A06-8594-13604D5AFDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D41B4C67-D26F-4A06-8594-13604D5AFDAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF58EB4-1FA8-4AEC-8C2D-43DDAE7E3FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF58EB4-1FA8-4AEC-8C2D-43DDAE7E3FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF58EB4-1FA8-4AEC-8C2D-43DDAE7E3FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF58EB4-1FA8-4AEC-8C2D-43DDAE7E3FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B780A1A6-60BF-43AD-8D41-34DE0D98C60F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B780A1A6-60BF-43AD-8D41-34DE0D98C60F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B780A1A6-60BF-43AD-8D41-34DE0D98C60F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B780A1A6-60BF-43AD-8D41-34DE0D98C60F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
