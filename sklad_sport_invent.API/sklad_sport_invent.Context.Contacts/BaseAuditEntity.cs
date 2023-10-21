@@ -41,7 +41,7 @@ namespace sklad_sport_invent.Context.Contacts
         /// <summary>
         /// Дата удаления 
         /// </summary>>
-
+        
         public DateTimeOffset? DatedAt { get; set; }
     }
 }
