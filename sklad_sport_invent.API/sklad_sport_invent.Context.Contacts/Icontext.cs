@@ -2,7 +2,7 @@
 
 namespace sklad_sport_invent.Context.Contacts
 {
-    internal interface  IContext
+    public interface  IContext
     {
         /// <summary>
         /// покупатели

@@ -9,7 +9,7 @@ namespace sklad_sport_invent.Context.Contacts
     /// <summary>
     /// покупатель 
     /// </summary>
-    internal class Customer : BaseAuditEntity
+    public class Customer : BaseAuditEntity
     {
         /// <summary>
         /// Фамилия имя отчество 

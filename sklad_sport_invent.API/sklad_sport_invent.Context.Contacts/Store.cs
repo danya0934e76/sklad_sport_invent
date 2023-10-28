@@ -9,7 +9,7 @@ namespace sklad_sport_invent.Context.Contacts
     /// <summary>
     /// склад 
     /// </summary>
-    internal class Store : BaseAuditEntity
+    public class Store : BaseAuditEntity
        
     {
         /// <summary>
