@@ -9,7 +9,7 @@ namespace sklad_sport_invent.Context.Contacts
     /// <summary>
     /// ведомость товара
     /// </summary>
-    internal class VedomProductItrem 
+    public class VedomProductItrem 
     {
         /// <summary>
         /// идентификтаор 

@@ -9,7 +9,7 @@ namespace sklad_sport_invent.Context.Contacts
     /// <summary>
     /// накладная 
     /// </summary>
-    internal class Nakladnaya : BaseAuditEntity
+    public class Nakladnaya : BaseAuditEntity
     {
         /// <summary>
         /// идентификатор покупателя 

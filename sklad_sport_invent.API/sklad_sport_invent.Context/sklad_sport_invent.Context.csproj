@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\sklad_sport_invent.Context.Contacts\sklad_sport_invent.Context.Contacts.csproj" />
+  </ItemGroup>
+
 </Project>

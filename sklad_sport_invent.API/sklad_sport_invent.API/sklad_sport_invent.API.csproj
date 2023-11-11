@@ -10,4 +10,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\sklad_sport_invent.Context\sklad_sport_invent.Context.csproj" />
+  </ItemGroup>
+
 </Project>
