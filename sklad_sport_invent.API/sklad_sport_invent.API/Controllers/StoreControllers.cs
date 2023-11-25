@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using sklad_sport_invent.Context;
+using sklad_sport_invent.Context.Contacts;
 
 namespace sklad_sport_invent.API.Controllers
 {
@@ -7,17 +8,29 @@ namespace sklad_sport_invent.API.Controllers
     [Route("[controller]")]
     public class StoreController : ControllerBase
     {
+        private readonly IContext context1;
+        public StoreController(IContext context1)
+        {
+            this.context1 = context1;
+        }
+
         [HttpGet] //localhost:111224/group 
         public IActionResult GetAllStore()
         {
 
-            var context = new SkladContext();
-            var storelist = context.Stores.ToList();
+
+  
+            var storelist = context1.Stores.ToList();
 
             return Ok(storelist);
 
         }
-
+        [HttpGet("{id:guid}")]
+        public IActionResult Get(Guid id)
+        {
+            var storelist = context1.Stores.FirstOrDefault(x => x.Id == id);
+            return Ok(storelist);
+        }
 
     }
 
