@@ -1,5 +1,8 @@
 ﻿
 
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+
 namespace sklad_sport_invent.Context.Contacts
 {
     public interface  IContext
@@ -7,23 +10,23 @@ namespace sklad_sport_invent.Context.Contacts
         /// <summary>
         /// покупатели
         /// </summary>
-        ICollection<Customer> Customers { get; }
+        DbSet<Customer> Customers { get; }
         /// <summary>
         /// накладная
         /// </summary>
-        ICollection<Nakladnaya> Nakladnaya { get;}
+        DbSet<Nakladnaya> Nakladnaya { get;}
         /// <summary>
         /// продукт
         /// </summary>
-        ICollection<Product> Products { get; }
+        DbSet<Product> Products { get; }
         /// <summary>
         /// склад
         /// </summary>
-        ICollection<Store> Stores { get; }
+        DbSet<Store> Stores { get; }
         /// <summary>
         /// поставщик
         /// </summary>
-        ICollection<Supplier> Suppliers { get; }
+        DbSet<Supplier> Suppliers { get; }
 
     }
 }

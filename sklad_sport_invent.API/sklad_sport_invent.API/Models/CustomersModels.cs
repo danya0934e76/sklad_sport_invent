@@ -5,11 +5,11 @@
         /// <summary>
         /// Фамилия имя отчество 
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         /// <summary>
         /// адрес
         /// </summary>
-        public string Address { get; set; }
+        public string Address { get; set; } = string.Empty;
     }
 }

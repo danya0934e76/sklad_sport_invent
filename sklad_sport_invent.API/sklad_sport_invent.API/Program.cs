@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using sklad_sport_invent.Context;
 using sklad_sport_invent.Context.Contacts;
 
@@ -9,8 +10,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IContext, SkladContext>();
 
+var conString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContextFactory<SkladContext>(x => x.UseSqlServer(conString), ServiceLifetime.Scoped);
+builder.Services.AddScoped<SkladContext>(x=>x.GetService<SkladContext>());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

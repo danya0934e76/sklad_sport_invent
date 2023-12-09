@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using sklad_sport_invent.Context;
 using sklad_sport_invent.Context.Contacts;
 
 namespace sklad_sport_invent.API.Controllers
