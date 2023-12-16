@@ -36,6 +36,8 @@ public class CustomerController : ControllerBase
              Id = Guid.NewGuid(),
              Name = model.Name,
             Address= model.Address,
+            Email= model.Email,
+            TelNum= model.TelNum,
               CreatedAt= DateTime.UtcNow,
               CreatedBy= "ya",
               UpDatedAt= DateTime.UtcNow,
@@ -44,6 +46,7 @@ public class CustomerController : ControllerBase
 
          };
             context1.Customers.Add(item);   
+            context1.SaveChanges();
             return Ok(item);
         }
         [HttpDelete("{id}")]
@@ -53,6 +56,7 @@ public class CustomerController : ControllerBase
             if (customer12 != null) 
             {
                 context1.Customers.Remove(customer12);
+                context1.SaveChanges(); 
             }
             return Ok();
         }

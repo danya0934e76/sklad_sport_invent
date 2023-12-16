@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 
 var conString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContextFactory<SkladContext>(x => x.UseSqlServer(conString), ServiceLifetime.Scoped);
-builder.Services.AddScoped<SkladContext>(x=>x.GetService<SkladContext>());
+builder.Services.AddScoped<IContext>(x=>x.GetRequiredService<SkladContext>());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
