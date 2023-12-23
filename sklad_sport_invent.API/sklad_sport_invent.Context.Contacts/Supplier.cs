@@ -9,7 +9,7 @@ namespace sklad_sport_invent.Context.Contacts
     /// <summary>
     /// поставщик 
     /// </summary>
-    public class Supplier : BaseAuditEntity
+    public class Supplier : BaseAuditEntity 
     {
         /// <summary>
         /// название поставщика 

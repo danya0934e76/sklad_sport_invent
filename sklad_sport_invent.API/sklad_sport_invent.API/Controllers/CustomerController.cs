@@ -5,62 +5,76 @@ namespace sklad_sport_invent.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-public class CustomerController : ControllerBase 
+    public class CustomerController : ControllerBase
     {
         private readonly IContext context1;
-        public CustomerController (IContext context1)
+        public CustomerController(IContext context1)
         {
             this.context1 = context1;
         }
 
         [HttpGet] //localhost:111224/group 
-        public IActionResult GetAllCustomers ()
+        public IActionResult GetAllCustomers()
         {
 
             var customerlist = context1.Customers.ToList();
-            
+
             return Ok(customerlist);
 
         }
         [HttpGet("{id:guid}")]
         public IActionResult Get(Guid id)
         {
-            var customerlist = context1.Customers.FirstOrDefault(x=> x.Id == id);
+            var customerlist = context1.Customers.FirstOrDefault(x => x.Id == id);
             return Ok(customerlist);
         }
         [HttpPost]
         public IActionResult Post(Customer model)
         {
-         var item = new Customer
-        {  
-             Id = Guid.NewGuid(),
-             Name = model.Name,
-            Address= model.Address,
-            Email= model.Email,
-            TelNum= model.TelNum,
-              CreatedAt= DateTime.UtcNow,
-              CreatedBy= "ya",
-              UpDatedAt= DateTime.UtcNow,
-              UpDatedBy = "ya",
+            var item = new Customer
+            {
+                Id = Guid.NewGuid(),
+                Name = model.Name,
+                Address = model.Address,
+                Email = model.Email,
+                TelNum = model.TelNum,
+                CreatedAt = DateTime.UtcNow,
+                CreatedBy = "ya",
+                UpDatedAt = DateTime.UtcNow,
+                UpDatedBy = "ya",
 
 
-         };
-            context1.Customers.Add(item);   
+            };
+            context1.Customers.Add(item);
             context1.SaveChanges();
             return Ok(item);
         }
         [HttpDelete("{id}")]
-        public IActionResult actionResultDelete(Guid id) 
+        public IActionResult actionResultDelete(Guid id)
         {
-            var customer12 = context1.Customers.FirstOrDefault(x=> x.Id == id);
-            if (customer12 != null) 
+            var customer12 = context1.Customers.FirstOrDefault(x => x.Id == id);
+            if (customer12 != null)
             {
                 context1.Customers.Remove(customer12);
-                context1.SaveChanges(); 
+                context1.SaveChanges();
             }
             return Ok();
         }
-
+        [HttpPut("{id:guid}")]
+        public IActionResult Edit(Guid id, Customer model)
+        {
+            var group = context1.Customers.FirstOrDefault(x => x.Id == id);
+            if (group != null)
+            {
+                return NotFound("нет такого");
+            }
+            group.Name = model.Name;
+            group.Address = model.Address;
+            group.Email = model.Email;
+            group.TelNum = model.TelNum;
+            group.UpDatedAt = DateTimeOffset.Now;
+            context1.SaveChanges();
+            return Ok(group);
+        }
     }
-    
 }
