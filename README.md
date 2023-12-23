@@ -2,6 +2,11 @@
 =============
 Группа: ИП20-7К
 --------------------
+Тема: Склад спортивного инвентаря 
+-----------------
+![image](https://github.com/danya0934e76/sklad_sport_invent/assets/107752444/ddc0cfdf-fdce-4c8c-8844-e9defdc6f917)
+----------------
+
 # skladSportInventar
 
 
